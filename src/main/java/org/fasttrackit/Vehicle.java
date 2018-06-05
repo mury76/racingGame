@@ -6,6 +6,7 @@ public class Vehicle {
     private String color;
     private double mileage;
     private double fuelLevel;
+
     // demonstrating constants
     public final static String RADIO_CONTROL = "Radio Control";
 
@@ -19,7 +20,7 @@ public class Vehicle {
     }
 
     public double accelerate(double speed, double time) {
-        System.out.println("Vehicle accelerates with " + speed + " for " + time + " seconds.");
+        System.out.println("Vehicle " + name + " accelerates with " + speed + " for " + time + " seconds.");
         double travelDistance = speed * time;
         System.out.println("Traveled distance: " + travelDistance);
         return travelDistance;

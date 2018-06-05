@@ -31,6 +31,9 @@ public class Game {
         secondCompetitor = car2;
 
         car1.accelerate(7.2, 6.9);
+
+        System.out.println(car1);
+        System.out.println(car2);
     }
 
     public Car getFirstCompetitor() {

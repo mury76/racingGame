@@ -6,7 +6,7 @@ public class Roket extends AutoVehicle {
 
     @Override
     public double accelerate(double speed, double time) {
-        System.out.println("Vehicle " + getName() + " accelerates with " + speed + " for " + time + " seconds.");
+        System.out.println("\n" + "Vehicle " + getName() + " accelerates with " + speed + " for " + time + " seconds.");
         double travelDistance = speed * time;
 
         travelDistance *= 2;
@@ -14,9 +14,12 @@ public class Roket extends AutoVehicle {
 
         checkFuel(travelDistance, getMileage());
 
+        travelDistance = Math.round(travelDistance * 100.0)/100.0;
+
         System.out.println("Traveled distance: " + travelDistance);
         return travelDistance;
     }
+
 
 
     public Roket(String name) {

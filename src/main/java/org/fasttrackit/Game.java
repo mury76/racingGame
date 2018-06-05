@@ -62,8 +62,6 @@ public class Game {
         roket.accelerate(9.5, 6.3);
 
 
-
-
     }
 
     public Car getFirstCompetitor() {
@@ -80,5 +78,21 @@ public class Game {
 
     public void setSecondCompetitor(Car secondCompetitor) {
         this.secondCompetitor = secondCompetitor;
+    }
+
+    public Car getThirdCompetitor() {
+        return thirdCompetitor;
+    }
+
+    public void setThirdCompetitor(Car thirdCompetitor) {
+        this.thirdCompetitor = thirdCompetitor;
+    }
+
+    public Roket getForthCompetitor() {
+        return forthCompetitor;
+    }
+
+    public void setForthCompetitor(Roket forthCompetitor) {
+        this.forthCompetitor = forthCompetitor;
     }
 }

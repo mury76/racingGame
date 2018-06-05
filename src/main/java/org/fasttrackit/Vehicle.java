@@ -20,8 +20,9 @@ public class Vehicle {
     }
 
     public double accelerate(double speed, double time) {
-        System.out.println("Vehicle " + name + " accelerates with " + speed + " for " + time + " seconds.");
+        System.out.println("\n" + "Vehicle " + name + " accelerates with " + speed + " for " + time + " seconds.");
         double travelDistance = speed * time;
+        travelDistance = Math.round(travelDistance * 100.0)/100.0;
         System.out.println("Traveled distance: " + travelDistance);
         checkFuel(travelDistance, mileage);
         return travelDistance;
@@ -29,7 +30,7 @@ public class Vehicle {
 
     public double checkFuel(double travelDistance, double mileage) {
         double consum = travelDistance * mileage;
-        System.out.println(" S-au consumat: " + consum);
+        System.out.println("The vehicle consumed a total of: " + consum + " Liters.");
         return consum;
     }
 

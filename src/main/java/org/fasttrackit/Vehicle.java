@@ -23,7 +23,14 @@ public class Vehicle {
         System.out.println("Vehicle " + name + " accelerates with " + speed + " for " + time + " seconds.");
         double travelDistance = speed * time;
         System.out.println("Traveled distance: " + travelDistance);
+        checkFuel(travelDistance, mileage);
         return travelDistance;
+    }
+
+    public double checkFuel(double travelDistance, double mileage) {
+        double consum = travelDistance * mileage;
+        System.out.println(" S-au consumat: " + consum);
+        return consum;
     }
 
     public String getName() {

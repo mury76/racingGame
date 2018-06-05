@@ -25,6 +25,11 @@ public class Vehicle {
         travelDistance = Math.round(travelDistance * 100.0)/100.0;
         System.out.println("Traveled distance: " + travelDistance);
         checkFuel(travelDistance, mileage);
+
+        double consumedFuel = mileage * travelDistance / 100;
+//    fuelLevel = fuelLevel - consumedFuel;
+        fuelLevel -= consumedFuel;
+
         return travelDistance;
     }
 
@@ -32,6 +37,7 @@ public class Vehicle {
         double consum = travelDistance * mileage;
         System.out.println("The vehicle consumed a total of: " + consum + " Liters.");
         return consum;
+
     }
 
     public String getName() {

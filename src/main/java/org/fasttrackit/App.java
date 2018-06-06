@@ -6,8 +6,25 @@ public class App {
         game.start();
 
 
+/*
+    // Arras utility exanple
+    String text = "100,00 RON";
+    String[] result = text.split(" ");
 
+    for (String resultElement : result) {
+        System.out.println(resultElement);
+    }
 
+    String priceAsString = result[0];
+        System.out.println("Price as string before replace: " + priceAsString);
 
+        priceAsString = priceAsString.replace(",", ".");
+        System.out.println("Price as string after replace: " + priceAsString);
+
+        double price = Double.parseDouble(priceAsString);
+        System.out.println("Parsed price: " + price);
+    }
+
+*/
     }
 }

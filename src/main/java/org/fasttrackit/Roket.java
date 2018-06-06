@@ -12,12 +12,15 @@ public class Roket extends AutoVehicle {
         travelDistance *= 2;
         // travelDistance = travelDistance * 2;
 
-        checkFuel(travelDistance, getMileage());
 
         travelDistance = Math.round(travelDistance * 100.0)/100.0;
 
         System.out.println("Traveled distance: " + travelDistance);
+
+        checkFuel(travelDistance, getMileage());
+
         return travelDistance;
+
     }
 
 

@@ -1,6 +1,13 @@
 package org.fasttrackit;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
+
+    private Vehicle[] competitors = new Vehicle[4];
+    private List<Vehicle> competitorList = new ArrayList<>();
+
     private Car firstCompetitor;
     private Car secondCompetitor;
     private Car thirdCompetitor;
@@ -51,6 +58,39 @@ public class Game {
 
         roket.setEngine(engine4);
 
+        competitors[0] = car1;
+        competitors[1] = car2;
+        competitors[2] = car3;
+        competitors[3] = roket;
+
+        competitorList.add(car1);
+        competitorList.add(car2);
+        competitorList.add(car3);
+        competitorList.add(roket);
+
+        // for loop (Arrays)
+        for (int i = 0; i < competitors.length; i++) {
+            System.out.println("Iteration number: " + i);
+            System.out.println(competitors[i] + "\n");
+            competitors[i].accelerate(8, 9);
+
+        // enhanced for (Arrays)
+        for (Vehicle vehicle : competitors) {
+            System.out.println(vehicle);
+        }
+
+        // for loop (Lists)
+        for (int j = 0; j < competitorList.size(); j++) {
+                System.out.println(competitorList.get(j));
+            }
+
+        // enhanced for (Lists)
+        for (Vehicle fdsajfas : competitorList) {
+                System.out.println(fdsajfas);
+            }
+
+        }
+
         firstCompetitor = car1;
         secondCompetitor = car2;
         thirdCompetitor = car3;
@@ -59,7 +99,7 @@ public class Game {
         car1.accelerate(7.2, 6.9);
         car2.accelerate(6.5, 7.3);
         car3.accelerate(9.5, 6.3);
-        roket.accelerate(9.5, 6.3);
+        roket.accelerate(9.3, 6.3);
 
 
 

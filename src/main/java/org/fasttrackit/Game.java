@@ -11,6 +11,8 @@ public class Game {
     public static final int INITIAL_FUEL_LEVEL = 300;
     public static final int LOWER_MILEAGE_BOUND = 3;
     public static final int UPPER_MILEAGE_BOUND = 15;
+    public static final double TRACK_LENGTH = 500;
+
     private Vehicle[] competitors = new Vehicle[4];
     private List<Vehicle> competitorList = new ArrayList<>();
 
@@ -23,6 +25,7 @@ public class Game {
 
     public void start() {
         initCompetitors();
+        determineWinner();
 
     }
 //        Car car1 = new Car("Dacia");
@@ -114,6 +117,24 @@ public class Game {
 //
 //    }
 //
+        private void determineWinner() {
+            boolean winnerUnknown = true;
+
+            while (winnerUnknown) {
+                for (int i = 0; i < competitorList.size(); i++) {
+                    System.out.println("\n" + "Enter acceleration speed for player " + (i + 1));
+                    int accelerationSpeed = readAndCheckInt();
+                    double traveledDistance = competitorList.get(i).accelerate(accelerationSpeed);
+
+                  if (traveledDistance >= TRACK_LENGTH) {
+                      System.out.println("\n" + "Congrats! PLAYER " + (i + 1) + " WON the game!");
+                      winnerUnknown = false;
+                      break;
+            }
+        }
+    }
+
+}
     private void initCompetitors() {
         System.out.println("Enter number of players.");
 
